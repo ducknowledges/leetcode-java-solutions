@@ -12,8 +12,8 @@ public class TwoSum {
 
     public int[] getTwoSum(int[] num, int target, String timeComplexity) {
         return switch (timeComplexity) {
-            case "O(n^2)" -> this.getTwoSumBigOn2(num, target);
-            case "O(n)"   -> this.getTwoSumBigOn(num, target);
+            case "T(n^2)S(1)" -> this.getTwoSumTimeN2Space1(num, target);
+            case "T(n)S(N)"   -> this.getTwoSumTimeNSpaceN(num, target);
             default -> new int[]{};
         };
     }
@@ -22,7 +22,7 @@ public class TwoSum {
     * Time: O(n^2)
     * Space: O(1)
     * */
-    private int[] getTwoSumBigOn2(int[] nums, int target) {
+    private int[] getTwoSumTimeN2Space1(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
@@ -37,7 +37,7 @@ public class TwoSum {
      * Time: O(n)
      * Space: O(n)
      * */
-    private int[] getTwoSumBigOn(int[] nums, int target) {
+    private int[] getTwoSumTimeNSpaceN(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int diff = target - nums[i];
