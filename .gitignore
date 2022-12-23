@@ -1,8 +1,11 @@
-#Build
+# Build
 target
 
 # Compiled class file
 *.class
+
+# Log file
+*.log
 
 # Package Files #
 *.jar
@@ -16,3 +19,6 @@ target
 #IDEA
 .idea
 *.iml
+
+#VSCODE
+.vscode
